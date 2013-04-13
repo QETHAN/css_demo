@@ -1,0 +1,35 @@
+<head>
+	<style type="text/css">
+		body,div{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			height: 200px;
+			color: #f00;
+		}
+		.left{
+			float: left;
+			width: 100px;
+			background: #00f;
+			_margin-right: -3px;/*add 3px right for ie6*/
+		}
+		.right{
+			float: right;
+			width: 100px;
+			background: #0f0;
+			_margin-left: -3px;/*for ie6*/
+		}
+		.center{
+			background: #333;
+			margin: 0 100px;
+			_margin: 0 97px;/*for ie6*/
+		}
+	</style>
+</head>
+
+<body>
+	<div class='left'>left</div>
+	<div class='right'>right</div>
+	<div class='center'>center</div>
+</body>

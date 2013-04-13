@@ -1,0 +1,48 @@
+<head>
+	<title>高度自适应</title>
+	<style type="text/css">
+	html,body{height: 100%;}
+	body,div{
+		margin: 0;
+		padding: 0;
+		color: #f00;
+	}
+	* html{padding-top: 100px;}/*for ie6*/
+	.top{
+		background:#36C;
+		height: 100px;
+	}
+	* html .top{
+		background: #36C;
+		height: 100px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}/*for ie6*/
+	.main{
+		background: #F90;
+		width: 100%;
+		position: absolute;
+		top: 100px;
+		bottom: 0;
+		overflow: auto;
+	}
+	* html .main{
+		background: #F90;
+		position: static;
+		height: 100%;
+	}/*for ie6*/
+	</style>	
+</head>
+<body>
+	<div class='top'>top.....</div>
+	<div class='main'>main position:absolute</div>
+</body>
+
+<!--
+	在IE6中的方案
+
+好吧，不想再对IE6吐槽，只想尽快搞定它。
+
+在IE6中的思路是，把html和body元素的高度设定为100%，即浏览器窗口的高度，然后利用padding-top在html元素上挤出一点空间来，因为绝对定位的最高参照物是参照html元素的，所以可以把顶栏绝对定位在html的padding-top那块空间上。这时body的高度就是html的高度（也是浏览器窗口的高度）减去html的padding-top的值，这也是ie6非常奇怪的一个特性，因为按照w3c盒模型来讲，增加了html元素的padding-top,则html元素的高度也会相应增加，这时浏览器窗口应该会出现垂直滚动条了。但IE6不会，html的增加了padding-top后，整个html元素的高度还是保持不变，即浏览器窗口的高度，变化的是body的高度减小了，用来抵消html的padding-top.
+	-->
