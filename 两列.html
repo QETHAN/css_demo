@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<style type="text/css">
+		/*
+			两列定宽
+		*/
+			* {
+				margin: 0;
+				padding: 0;	
+			}
+			#header, #footer {
+				width: 960px;
+				height: 30px;
+				background-color: #e8e8e8;
+				margin: 0px auto;
+			}
+			#container {
+				width: 960px;
+				/*height: 250px;*/
+				margin: 10px auto;
+				overflow: hidden;
+			}
+			#container:after {
+				display: block;
+				visibility: hidden;
+				font-size: 0;
+				line-height: 0;
+				clear: both;
+				content: "";
+			}
+			.mainBox {
+				float: left;
+				/*width: 680px;*/
+				width: 70%;
+				/*height: 250px;*/
+				color: #ffffff;
+				background-color: #333333;
+				/*overflow: scroll;*/
+			}
+			.sideBox {
+				float: right;
+				/*width: 270px;*/
+				width: 28%;
+				/*margin-left: -100px;*/
+				/*height: 250px;*/
+				color: #ffffff;
+				background-color: #999999;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="header">头部信息</div>
+		<div id="container">
+			<div class="mainBox">主要内容区域
+				主要内容区域<br/>
+				主要内容区域<br/>
+				主要内容区域<br/>
+				主要内容区域<br/>
+				主要内容区域<br/>
+				主要内容区域<br/>
+				主要内容区域<br/>
+				主要内容区域<br/>
+				主要内容区域<br/>
+
+				主要内容区域<br/>主要内容区域<br/>
+
+				主要内容区域<br/>
+				主要内容区域<br/>主要内容区域<br/>
+
+				主要内容区域<br/>
+				主要内容区域<br/>
+				主要内容区域<br/>
+				主要内容区域<br/>主要内容区域<br/>
+
+				主要内容区域<br/>
+				主要内容区域2<br/>
+			</div>
+			<div class="sideBox">侧边栏</div>
+		</div>
+		<div id="footer">底部信息</div>
+	</body>
+</html>
