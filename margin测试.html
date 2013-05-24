@@ -1,0 +1,36 @@
+<head>
+	<style type="text/css">
+		.f1{
+			background: #000;
+			width: 300px;
+			height: 400px;
+			position: absolute;
+			top:200px;
+		}
+		.c1{
+			float: left;
+			background: green;
+			height: 300px;
+			width:100px;
+			margin-right: -200px;
+		}
+		.c2{
+			float:right;
+			background: red;
+			width: 200px;
+			/*不设置width,margin负值会增加width*/
+			height: 200px;
+			/*margin-right: -40px;*/
+			margin-top: -100px;
+			/*margin-bottom: -100px;*/
+		}
+	</style>
+</head>
+
+<body>
+	<div class='f1'>
+		<div class='c1'></div>
+		<div class='c2'>
+		</div>
+	</div>
+</body>
