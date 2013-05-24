@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="content-type:text/html;charset=utf-8">
+		<style type="text/css">
+
+		/*
+			1. 采用背景图片，固定宽度
+			2. 采用负边距，自适应宽度，百分比（下边的）
+		*/
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.header, .footer {
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				color: #ffffff;
+				background-color: #aaaaaa;
+			}
+
+			.container {
+				/*float: left;*/
+				text-align: center;
+				color: #ffffff;
+				overflow: hidden;
+			}
+
+			.mainBox {
+				float: left;
+				width: 100%;
+				background-color: #ffffff;
+			
+			}
+
+			.mainBox .content {
+				margin: 0 21% 0 41%;
+				background-color: #000000;
+					margin-bottom: -9999px;
+				padding-bottom: 9999px;
+			}
+
+			.subMainBox {
+				float: left;
+				width: 40%;
+				margin-left: -100%;
+				background-color: #666666;
+				margin-bottom: -9999px;
+				padding-bottom: 9999px;
+			}
+
+			.sideBox {
+				float: left;
+				width: 20%;
+				margin-left: -20%;
+				background-color: #666666;
+				margin-bottom: -9999px;
+				padding-bottom: 9999px;
+			}
+
+			.footer {
+				clear: both;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">头部信息</div>
+
+		<div class="container">
+
+			<div class="mainBox">
+				<div class="content">
+					主要内容区域<br/>
+				
+
+				</div>
+			</div>
+
+			<div class="subMainBox">次要内容区域
+					主要内容区域<br/>
+					主要内容区域<br/>
+					主要内容区域<br/>
+					主要内容区域<br/>
+					主要内容区域<br/>
+					主要内容区域<br/>
+					主要内容区域<br/>
+					主要内容区域<br/>
+			</div>
+
+			<div class="sideBox">侧边栏</div>
+
+		</div>
+
+		<div class="footer">底部信息</div>
+	</body>
+</html>
