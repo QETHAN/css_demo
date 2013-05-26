@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				font: normal 14px/1.5em Verdana, Lucida, Arial, Helvetica, sans-serif;
+			}
+
+			ul {
+				width: 150px;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border-bottom: 1px solid #ccc;
+			}
+
+			#nav li {
+				position: relative;
+			}
+			
+			#nav li ul {
+				display: none;
+				position: absolute;
+				left: 149.5px;
+				top: 0;
+				border-bottom: 1px solid #ccc;
+			}
+
+			ul li a {
+				display: block;
+				/*height: 100%;*/
+				padding: 5px;
+				text-decoration: none;
+				color: #777;
+				border: 1px solid #ccc;
+				border-bottom: 0px;
+				background: #fff;
+			}
+
+			#nav li:hover ul, #nav li.over ul {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul id="nav">
+			<li>
+				<a href="#">首页</a>
+			</li>
+			<li>
+				<a href="#">关于我</a>
+				<ul>
+					<li>
+						<a href="#">profile</a>
+					</li>
+					<li>
+						<a href="#">github</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">我的前端</a>
+				<ul>
+					<li>
+						<a href="#">xhtml+css</a>
+					</li>
+					<li>
+						<a href="#">javascript</a>
+					</li>
+					<li>
+						<a href="#">nodejs</a>
+					</li>
+					<li>
+						<a href="#">mongodb</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">我的朋友</a>
+				<ul>
+					<li>
+						<a href="#">男生</a>
+					</li>
+					<li>
+						<a href="#">女生</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			fnStartList = function() {
+				if(document.all && document.getElementById) {
+					navRoot = document.getElementById("nav");
+					var i,
+							len = navRoot.childNodes.length;
+
+					for(i=10; i<len; i++) {
+						node = navRoot.childNodes[i];
+						if(node.nodeName === "LI") {
+							node.onmouseover = function(){
+								this.className +=" over";
+							}
+							node.onmouseout = function() {
+								this.className = this.className.replace(" over","");
+							}
+						}
+						
+					}				
+				} else if(document.getElementById){
+					navRoot = document.getElementById("nav");
+					var i,
+							len = navRoot.childNodes.length;
+
+					for(i=10; i<len; i++) {
+						node = navRoot.childNodes[i];
+						if(node.nodeName === "LI") {
+							node.onmouseover = function(){
+								this.className +=" over";
+							}
+							node.onmouseout = function() {
+								this.className = this.className.replace(" over","");
+							}
+						}
+						
+					}				
+				}
+			}
+			window.onload = fnStartList;
+		</script>
+	</body>
+</html>

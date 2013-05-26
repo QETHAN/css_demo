@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				font: normal 14px/1.5em Verdana, Lucida, Arial, Helvetica, sans-serif;
+			}
+
+			ul {
+				width: 400px;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border-right: 1px solid #ccc;
+			}
+
+			ul:after {
+				display: block;
+				visibility: hidden;
+				font-size: 0;
+				line-height: 0;
+				clear: both;
+				content: "";
+			}
+			#nav li {
+				position: relative;
+				float: left;
+				width: 100px;
+				height: 30px;
+			}
+
+			#nav li ul {
+				display: none;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 30px;
+			}
+
+			ul li a {
+				display: block;
+				height: 28px;
+				overflow: hidden;
+				line-height: 30px;
+				text-align: center;
+				text-decoration: none;
+				color: #777;
+				border: 1px solid #ccc;
+				border-right: 0px;
+				background: #fff;
+			}
+
+			ul li li {
+				margin-top: -1px;
+			}
+
+			#nav li:hover ul, #nav li.over ul {
+				display: block;
+			}
+
+			/* 针对IE6在触发弹出层时的错位解决方案 */
+			* html ul li {float:left;zoom:1;}
+			* html ul li a {zoom:1;}
+
+		</style>
+	</head>
+
+	<body>
+		<ul id="nav">
+			<li>
+				<a href="#">首页</a>
+			</li>
+			<li>
+				<a href="#">关于我</a>
+				<ul>
+					<li>
+						<a href="#">profile</a>
+					</li>
+					<li>
+						<a href="#">github</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">我的前端</a>
+				<ul>
+					<li>
+						<a href="#">xhtml+css</a>
+					</li>
+					<li>
+						<a href="#">javascript</a>
+					</li>
+					<li>
+						<a href="#">nodejs</a>
+					</li>
+					<li>
+						<a href="#">mongodb</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">我的朋友</a>
+				<ul>
+					<li>
+						<a href="#">男生</a>
+					</li>
+					<li>
+						<a href="#">女生</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			fnStartList = function() {
+				if(document.all && document.getElementById) {
+					navRoot = document.getElementById("nav");
+					var i,
+							len = navRoot.childNodes.length;
+
+					for(i=10; i<len; i++) {
+						node = navRoot.childNodes[i];
+						if(node.nodeName === "LI") {
+							node.onmouseover = function(){
+								this.className +=" over";
+							}
+							node.onmouseout = function() {
+								this.className = this.className.replace(" over","");
+							}
+						}
+						
+					}				
+				} else if(document.getElementById){
+					navRoot = document.getElementById("nav");
+					var i,
+							len = navRoot.childNodes.length;
+
+					for(i=10; i<len; i++) {
+						node = navRoot.childNodes[i];
+						if(node.nodeName === "LI") {
+							node.onmouseover = function(){
+								this.className +=" over";
+							}
+							node.onmouseout = function() {
+								this.className = this.className.replace(" over","");
+							}
+						}
+						
+					}				
+				}
+			}
+			window.onload = fnStartList;
+		</script>
+	</body>
+</html>
