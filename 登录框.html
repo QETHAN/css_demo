@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<style type="text/css">
+			.user_login {
+				width: 240px;
+				padding: 1px;
+				border: 1px solid #dbdbd0;
+				background-color: #ffffff;
+				margin: 100px auto;
+			}
+
+			.user_login * {
+				margin: 0;
+				padding: 0;
+				font: normal 12px/1.5em "宋体", Verdana,Lucida, Arial, Helvetica, sans-serif;
+			}
+
+			.user_login h3 {
+				height: 24px;
+				line-height: 24px;
+				font-weight: bold;
+				text-align: center;
+				background-color: #eeeee8;
+			}
+
+			.user_login .content {
+				padding: 5px;
+			}
+
+			.user_login .frm_cont {
+				margin-bottom: 5px;
+			}
+
+			.user_login .frm_cont label {
+				cursor: pointer;
+			}
+
+			.user_login .userName input, .user_login .userPsw input,.user_login .validate input {
+				width: 146px;
+				height: 17px;
+				padding: 3px 2px 0;
+				border: 1px solid #a9a98d;
+			}
+
+			.user_login .validate input {
+				width: 36px;
+				text-align: center;
+				margin-right: 5px;
+			}
+
+			.user_login .keepLogin {
+				padding-left: 48px;
+			}
+
+			.user_login .keepLogin input {
+				margin-right: 5px;
+				/*vertical-align: -1px;*/
+				*vertical-align: 0;
+			}
+
+
+			.user_login .btns {
+				text-align: center;
+				/*padding-top: 2px;*/
+				margin: 0;
+				padding: 0;
+				/*border: 1px solid red;*/
+			}
+			.user_login .btns .btn_login {
+				margin: 0;
+				padding: 0;
+			}
+			.user_login .btns a {
+				display: inline-block;
+				/*margin-top: 2px;*/
+				height: 21px;
+				line-height: 21px;
+				padding: 0px 4px 0px;
+				text-decoration: none;
+				color: #000;
+			}
+
+			.user_login .btns .btn_login {
+				/*display: inline-block;*/
+				/*margin: 2px;*/
+				height: 21px;
+				line-height: 21px;
+				padding: 0px 4px;
+				padding-top: 3px;
+				padding-bottom: 3px;
+				/*vertical-align: -1px;*/
+				/**vertical-align: -3px;*/
+				cursor: pointer;
+			}
+
+			.user_login .btns .btn_login, 
+			.user_login .btns a {
+				border: 1px solid #a9a98d;
+				background: url(./images/bg_btn.gif) repeat-x 0 0;
+			}
+		</style>
+		<title>登录框</title>
+	</head>
+
+	<body>
+		<div class="user_login">
+			<h3>用户登录</h3>
+			<div class="content">
+				<form method="post" action="#">
+					<div class="frm_cont userName">
+						<label for="userName">用户名： </label>
+						<input type="text" id="userName">
+					</div>
+					<div class="frm_cont userPsw">
+						<label for="userPsw">密　码： </label>
+						<input type="text" id="userPwd">
+					</div>
+					<div class="frm_cont validate">
+						<label for="validate">验证码： </label>
+						<input type="text" id="validate">
+						<img src="./images/getcode.jpg" alt="验证码：3731" />
+					</div>
+					<div class="frm_cont keepLogin">
+						<input type="checkbox" id="keepLogin">
+						<label for="keepLogin">记住我的登录信息 </label>
+					</div>
+					<div class="btns">
+						<span class="btn_login" value="登录">登录</span>
+						<a href="#" class="reg">用户注册</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
