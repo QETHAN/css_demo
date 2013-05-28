@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>选项卡</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=" />
+	<style type="text/css">
+	#tab {
+		position: relative;
+		width: 570px;
+		margin: 0 auto;
+	}
+
+	#tab div {
+		float: left;
+		width: 564px;
+		border: 1px solid #d4d3d3;
+		border-width: 0 1px 1px;
+		display: none; /* 隐藏所有选项卡的内容区域 */
+	}
+
+	#tab .block {
+		display: block;
+		padding-bottom: 10px;
+	}
+
+	#tab h3 {
+		float: left;
+		width: 114px;
+		height: 26px;
+		margin: 0 -1px 0 0;
+		line-height: 26px;
+		font-size: 14px;
+		font-weight: normal;
+		text-align: center;
+		color: #00007f;
+		background: #eee url(./images/tab_bg.gif) no-repeat;
+		cursor: pointer;
+	}
+
+	#tab .up {
+		background: #fff url(./images/tab_up_bg.gif) no-repeat;
+	}
+
+	#tab ul {
+		margin: 15px 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	#tab li {
+		display: inline;/* 解决IE6中双倍间距的BUG */
+		float:left;
+		width:47.9%; /* 解决IE浏览器中相对值宽度计算的BUG */
+		height:22px;
+		margin:0 1%;
+		line-height:22px;
+		text-indent:10px;
+		border-bottom:1px dashed #DEDEDE;
+	}
+
+	#tab li a {
+		font-size: 12px;
+		text-decoration: none;
+		text-indent: 10px;
+		color: #333;
+	}
+
+	#tab li a:hover {
+		text-decoration: underline;
+		color: #ff0000;
+	}
+</style>
+
+</head>
+
+<body>
+	<div id="tab">
+		<h3 class="up" onmouseover="go_to(1);">选择一</h3>
+		<h3 onmouseover="go_to(2);">选择二</h3>
+		<h3 onmouseover="go_to(3);">选择三</h3>
+		<h3 onmouseover="go_to(4);">选择四</h3>
+		<h3 onmouseover="go_to(5);">选择五</h3>
+
+		<div class="block">
+			<ul>
+				<li>
+					<a href="#">java1</a>
+				</li>
+				<li>
+					<a href="#">javascript</a>
+				</li>
+				<li>
+					<a href="#">PHP</a>
+				</li>
+				<li>
+					<a href="#">coffeeScript</a>
+				</li>
+				<li>
+					<a href="#">node.js</a>
+				</li>
+				<li>
+					<a href="#">socket.io</a>
+				</li>
+				<li>
+					<a href="#">gitHub</a>
+				</li>
+				<li>
+					<a href="#">git</a>
+				</li>
+				<li>
+					<a href="#">web前端开发</a>
+				</li>
+
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a href="#">coffeeScript</a>
+				</li>
+				<li>
+					<a href="#">node.js</a>
+				</li>
+				<li>
+					<a href="#">socket.io</a>
+				</li>
+				<li>
+					<a href="#">gitHub</a>
+				</li>
+				<li>
+					<a href="#">git</a>
+				</li>
+				<li>
+					<a href="#">web前端开发</a>
+				</li>
+
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a href="#">java3</a>
+				</li>
+				<li>
+					<a href="#">javascript</a>
+				</li>
+				<li>
+					<a href="#">gitHub</a>
+				</li>
+				<li>
+					<a href="#">git</a>
+				</li>
+				<li>
+					<a href="#">web前端开发</a>
+				</li>
+
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a href="#">PHP</a>
+				</li>
+				<li>
+					<a href="#">coffeeScript</a>
+				</li>
+				<li>
+					<a href="#">node.js</a>
+				</li>
+				<li>
+					<a href="#">socket.io</a>
+				</li>
+				<li>
+					<a href="#">gitHub</a>
+				</li>
+				<li>
+					<a href="#">git</a>
+				</li>
+				<li>
+					<a href="#">web前端开发</a>
+				</li>
+
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a href="#">socket.io</a>
+				</li>
+				<li>
+					<a href="#">gitHub</a>
+				</li>
+				<li>
+					<a href="#">git</a>
+				</li>
+				<li>
+					<a href="#">web前端开发</a>
+				</li>
+				<li>
+					<a href="#">java5</a>
+				</li>
+				<li>
+					<a href="#">javascript</a>
+				</li>
+				<li>
+					<a href="#">PHP</a>
+				</li>
+				<li>
+					<a href="#">coffeeScript</a>
+				</li>
+				<li>
+					<a href="#">node.js</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		<!--
+		var h=document.getElementById("tab").getElementsByTagName("h3");
+		var d=document.getElementById("tab").getElementsByTagName("div");
+
+		function go_to(index) {
+			var len = h.length,
+					i;
+			for(i=0;i<len;i++){
+				if((index-1)==i){
+					h[i].className+=" up";
+					d[i].className+=" block";
+				}
+				else {
+					h[i].className=" ";
+					d[i].className=" ";
+				}
+		}
+
+		}
+		-->
+	</script>
+</body>
+</html>
