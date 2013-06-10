@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.outside {
+				border: 1px solid #333;
+				margin: 50px auto;
+				width: 400px;
+				overflow: hidden;/* 父下边框 上升，即缩短了与子下边框的距离；设置隐藏，则隐藏掉父下边框下边的子元素部分*/
+			}
+			.inside {
+				position: relative;
+				border: 1px solid red;
+				margin: 50px auto;
+				margin-bottom: -100px;
+				/*margin-left: -50px;*/
+				padding-bottom: 100px;
+				width: 100px;
+				/*word-wrap,overflow 解决文字换行 */
+				word-wrap: break-word;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="outside">
+			<div class="inside">
+				222222222222222222222222
+				222222222222222222222222222
+			</div>
+		</div>
+	</body>
+</html>
